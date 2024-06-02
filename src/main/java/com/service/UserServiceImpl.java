@@ -42,11 +42,12 @@ public class UserServiceImpl implements UserService {
 		// Create session and store user data
 		
 		httpSession.setAttribute("UserID", byEmailAndPwd.getUserId());
+//		System.out.println(byEmailAndPwd.getUserId());
 		return "Succesfully loged in";
 	}
 
 	@Override
-	public Boolean signUp(SignupForm form) {
+	public boolean signUp(SignupForm form) {
 
 		UserDtlsEntity userDtlsEntity = userDetailsRepo.findByEmail(form.getEmail());
 		if (userDtlsEntity != null) {
@@ -90,6 +91,7 @@ public class UserServiceImpl implements UserService {
 		else {
 			return "Your password is incorrect";
 		}
+		
 		
 	}
 

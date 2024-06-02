@@ -3,9 +3,9 @@ package com.request;
 import lombok.Data;
 
 @Data
-public class EnquiryForm 
+public class UpdateForm 
 {
-	private String studentName;
+    private String studentName;
 	
 	private Long contactNo;
 	
@@ -14,8 +14,5 @@ public class EnquiryForm
 	private String courseName;
 	
 	private String enqStatus;
-
-	
-	
 
 }
